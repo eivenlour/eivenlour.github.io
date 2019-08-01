@@ -1,4 +1,4 @@
-# Personal Webpage
+# Personal Website
 
 ## Viewing
 My personal webpage can be viewed [here](https://eivenlour.github.io/personal-webpage).
