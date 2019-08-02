@@ -1,11 +1,11 @@
 # Personal Website
 
 ## Viewing
-My personal webpage can be viewed [here](https://eivenlour.github.io/personal-webpage).
+Development still in progress.
 
 ## Built With
-* HTML - for building the webpage
-* CSS - for styling the webpage
+* Bootstrap 4 - front-end framework
+* HTML, CSS, JavaScript
 
 ## Author
 **Eivenlour David** - main author
