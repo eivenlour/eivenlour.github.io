@@ -1,0 +1,32 @@
+body {
+    position: relative; 
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.nav-link {
+    color: gray;
+}
+
+a.nav-link.active {
+    color: black;
+}
+
+.item-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.item-content.odd {
+    background-color: rgb(243, 208, 214);
+}
+
+.item-content.even {
+    background-color: white;
+}
