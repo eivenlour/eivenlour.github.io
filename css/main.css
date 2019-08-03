@@ -1,5 +1,6 @@
 body {
     position: relative; 
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
@@ -7,11 +8,34 @@ body {
 }
 
 .nav-link {
-    color: gray;
+    color: white;
 }
 
 a.nav-link.active {
-    color: black;
+    color: grey;
+}
+
+#landing {
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../img/landing-background.jpeg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+.landing-content {
+    margin-right: 7vw;
+}
+
+.landing-name {
+    font-weight: 700;
+    font-size: 5vw;
+}
+
+.landing-title {
+    font-weight: 500;
+    font-size: 2.5vw;
 }
 
 .item-content {
@@ -21,12 +45,20 @@ a.nav-link.active {
     flex-direction: column;
 }
 
-
-
 .item-content.odd {
     background-color: rgb(243, 208, 214);
 }
 
 .item-content.even {
     background-color: white;
+}
+
+.contact-icon{
+    font-size:48px;
+    color:white;
+    padding: 0.7vw;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.contact-icon:hover{
+    -webkit-transform: scale(1.4);
 }
