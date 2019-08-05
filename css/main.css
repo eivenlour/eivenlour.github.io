@@ -37,7 +37,7 @@ a.nav-link.active {
     background-color: #000000;
     background-position: center;
  }
- 
+
 #landing {
     background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../img/landing-background.jpeg");
     background-position: center; 
@@ -91,3 +91,31 @@ a.nav-link.active {
 .contact-icon:hover{
     -webkit-transform: scale(1.4);
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .preloader {
+        background-size: 320px 162px;
+    }
+}
+  
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .preloader {
+        background-size: 400px 203px;
+    }
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .preloader {
+        background-size: 600px 305px;
+    }
+}
+  
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .preloader {
+        background-size: 800px 406px;
+    }
+  }
