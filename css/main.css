@@ -69,6 +69,13 @@ a.nav-link.active {
     font-size: 3vw;
 }
 
+#logo {
+    width: 40px;
+    top: 20px;
+    left: 30px;
+    position: fixed;
+}
+
 /* Contact icons */
 .contact-icon{
     font-size:48px;
@@ -90,11 +97,13 @@ a.nav-link.active {
 }
 
 .item-content.odd {
-    background-color: rgb(243, 208, 214);
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .item-content.even {
-    background-color: white;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* Extra small devices (phones) */
