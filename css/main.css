@@ -1,3 +1,4 @@
+/* Main */
 body {
     position: relative; 
     font-family: 'Montserrat', sans-serif;
@@ -15,6 +16,7 @@ a.nav-link.active {
     color: grey;
 }
 
+/* Preloader */
 .overlayer {
     position: absolute;
     top: 0;
@@ -38,6 +40,7 @@ a.nav-link.active {
     background-position: center;
  }
 
+ /* Landing page*/
 #landing {
     background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../img/landing-background.jpeg");
     background-position: center; 
@@ -66,6 +69,19 @@ a.nav-link.active {
     font-size: 3vw;
 }
 
+/* Contact icons */
+.contact-icon{
+    font-size:48px;
+    color:white;
+    padding: 0.7vw;
+    padding-top: 2vw;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.contact-icon:hover{
+    -webkit-transform: scale(1.4);
+}
+
+/* Item content */
 .item-content {
     height: 100vh;
     display: flex;
@@ -81,39 +97,28 @@ a.nav-link.active {
     background-color: white;
 }
 
-.contact-icon{
-    font-size:48px;
-    color:white;
-    padding: 0.7vw;
-    padding-top: 2vw;
-    -webkit-transition: all 0.3s ease-in-out;
-}
-.contact-icon:hover{
-    -webkit-transform: scale(1.4);
-}
-
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones) */
 @media only screen and (max-width: 600px) {
     .preloader {
         background-size: 320px 162px;
     }
 }
   
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones) */
 @media only screen and (min-width: 600px) {
     .preloader {
         background-size: 400px 203px;
     }
 }
   
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets) */
 @media only screen and (min-width: 768px) {
     .preloader {
         background-size: 600px 305px;
     }
 }
   
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops) */
 @media only screen and (min-width: 992px) {
     .preloader {
         background-size: 800px 406px;
