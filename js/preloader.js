@@ -1,4 +1,3 @@
-
 /* Preloader */
 
 $(window).load(function() {
@@ -6,3 +5,4 @@ $(window).load(function() {
     $(".overlayer").delay(5500).fadeOut("slow");
 
 })
+

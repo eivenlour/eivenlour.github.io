@@ -25,6 +25,7 @@ a.nav-link.active {
     height: 100vh;
     z-index: 9999;
     background-color: #000000;
+    background-attachment: fixed;
 }
   
 .preloader {
@@ -38,6 +39,7 @@ a.nav-link.active {
     background-repeat: no-repeat; 
     background-color: #000000;
     background-position: center;
+    background-attachment: fixed;
  }
 
  /* Landing page*/
