@@ -6,6 +6,7 @@ Development still in progress.
 ## Built With
 * Bootstrap 4
 * jQuery
+* Modernizr
 * HTML, CSS, JavaScript
 
 
