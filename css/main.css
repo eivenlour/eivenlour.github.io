@@ -48,12 +48,17 @@ a.nav-link.active {
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
-    color: #fff;
+    color: #ffffff;
 }
 
 .landing-content {
     margin-left: 45vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .landing-intro {
@@ -90,22 +95,79 @@ a.nav-link.active {
     -webkit-transform: scale(1.4);
 }
 
+/* Pages */
+#about {
+    background-color: #000000;
+}
+
+#portfolio {
+    background-color: #000000;
+}
+
+#contact {
+    background-color: #000000;
+}
+
 /* Item content */
 .item-content {
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-.item-content.odd {
-    background-color: #000000;
     color: #ffffff;
 }
 
-.item-content.even {
-    background-color: #ffffff;
-    color: #000000;
+/* Buttons */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper.row {
+    flex-direction: row;
+}
+
+.button-wrapper.column {
+    flex-direction: column;
+}
+
+.start-button {
+   position: absolute;
+   bottom: 30px;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   background-color: transparent;
+   border-radius: 5px;
+   border-width: 2px;
+   color: #ffffff;
+   padding: 15px;
+   
+}
+
+.next-button {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+
+.back-button {
+    position: absolute;
+    left: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.button-icon {
+    width: 30px;
+}
+
+.button:hover {
+    opacity: 0.5;
 }
 
 /* Extra small devices (phones) */

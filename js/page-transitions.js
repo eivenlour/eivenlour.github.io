@@ -5,9 +5,10 @@
 
 var PageTransitions = (function() {
 
-	var $pages = $ ( '.pt-page' ),
+    var $pages = $ ( '.pt-page' ),
+        $start = $ ( '.start-button'),
 		$next = $ ( '.next-button'),
-		$back = $ ( '.back-button'),
+        $back = $ ( '.back-button'),
 		
 		pagesCount = $pages.length,
 		current = 0,
@@ -36,6 +37,10 @@ var PageTransitions = (function() {
 
 		$pages.eq( current ).addClass( 'pt-page-current' );
 
+        $start.on( 'click', function() {
+            nextPage();
+        } );
+        
 		$next.on( 'click', function() {
             nextPage();
 		} );
