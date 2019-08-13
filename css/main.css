@@ -147,7 +147,7 @@ a.nav-link.active {
 
 .next-button {
     position: absolute;
-    right: 30px;
+    right: 5px;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -156,7 +156,7 @@ a.nav-link.active {
 
 .back-button {
     position: absolute;
-    left: 30px;
+    left: 5px;
     cursor: pointer;
     background-color: transparent;
     border: none;
