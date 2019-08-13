@@ -1,160 +1,165 @@
 /* 
-	Code modified from pagetransitions.js obtained from:
-	Codrops Page Transitions by Pedro Botelho: https://github.com/codrops/PageTransitions 
+    Code modified from pagetransitions.js obtained from:
+    Codrops Page Transitions by Pedro Botelho: https://github.com/codrops/PageTransitions 
 */
 
 var PageTransitions = (function() {
 
+    /* Declare variables */
     var $pages = $ ( '.pt-page' ),
         $start = $ ( '.start-button'),
-		$next = $ ( '.next-button'),
+        $next = $ ( '.next-button'),
         $back = $ ( '.back-button'),
-		
-		pagesCount = $pages.length,
-		current = 0,
-		
-		isAnimating = false,
-		endCurrPage = false,
-		endNextPage = false,
-		endBackPage = false,
-		
-		animEndEventNames = {
-			'WebkitAnimation' : 'webkitAnimationEnd',
-			'OAnimation' : 'oAnimationEnd',
-			'msAnimation' : 'MSAnimationEnd',
-			'animation' : 'animationend'
-		},
-		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
-		support = Modernizr.cssanimations
+        
+        pagesCount = $pages.length,
+        current = 0,
 
+        isAnimating = false,
+        endCurrPage = false,
+        endNextPage = false,
+        endBackPage = false,
 
-	function init() {
+        animEndEventNames = {
+            'WebkitAnimation' : 'webkitAnimationEnd',
+            'OAnimation' : 'oAnimationEnd',
+            'msAnimation' : 'MSAnimationEnd',
+            'animation' : 'animationend'
+        },
+        animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
+        support = Modernizr.cssanimations
 
-		$pages.each( function() {
-			var $page = $( this );
-			$page.data( 'originalClassList', $page.attr( 'class' ) );
-		} );
+    /* Initialization */
+    function init() {
 
-		$pages.eq( current ).addClass( 'pt-page-current' );
+        $pages.each( function() {
+            var $page = $( this );
+            $page.data( 'originalClassList', $page.attr( 'class' ) );
+        } );
 
+        /* Set first page as current page */
+        $pages.eq( current ).addClass( 'pt-page-current' );
+
+        /* When START button is clicked, go to next page */
         $start.on( 'click', function() {
             nextPage();
         } );
         
-		$next.on( 'click', function() {
+        /* When next button is clicked, go to next page */
+        $next.on( 'click', function() {
             nextPage();
-		} );
+        } );
 
-		$back.on( 'click', function() {
+        /* When back button is clicked, go to previous page */
+        $back.on( 'click', function() {
             backPage();
-		} );
-	}
+        } );
+    }
 
-	function nextPage() {
+    /* Go to next page */
+    function nextPage() {
 
-		if( isAnimating ) {
-			return false;
-		}
+        if( isAnimating ) {
+            return false;
+        }
+        isAnimating = true;
 
-		isAnimating = true;
+        var $currPage = $pages.eq( current );
 
-		var $currPage = $pages.eq( current );
+        if( current < pagesCount - 1 ) {
+            ++current;
+        }
+        else {
+            current = 0;
+        }
 
-		if( current < pagesCount - 1 ) {
-			++current;
-		}
-		else {
-			current = 0;
-		}
+        var $nextPage = $pages.eq( current ).addClass( 'pt-page-current' ),
+            outClass = 'pt-page-moveToLeft', inClass = 'pt-page-moveFromRight';
 
-		var $nextPage = $pages.eq( current ).addClass( 'pt-page-current' ),
-			outClass = 'pt-page-moveToLeft', inClass = 'pt-page-moveFromRight';
+        $currPage.addClass( outClass ).on( animEndEventName, function() {
+            $currPage.off( animEndEventName );
+            endCurrPage = true;
+            if( endNextPage ) {
+                onEndAnimation( $currPage, $nextPage);
+            }
+        } );
 
+        $nextPage.addClass( inClass ).on( animEndEventName, function() {
+            $nextPage.off( animEndEventName );
+            endNextPage = true;
+            if( endCurrPage ) {
+                onEndAnimation( $currPage, $nextPage);
+            }
+        } );
 
-		$currPage.addClass( outClass ).on( animEndEventName, function() {
-			$currPage.off( animEndEventName );
-			endCurrPage = true;
-			if( endNextPage ) {
-				onEndAnimation( $currPage, $nextPage);
-			}
-		} );
+        if( !support ) {
+            onEndAnimation( $currPage, $nextPage);
+        }
 
-		$nextPage.addClass( inClass ).on( animEndEventName, function() {
-			$nextPage.off( animEndEventName );
-			endNextPage = true;
-			if( endCurrPage ) {
-				onEndAnimation( $currPage, $nextPage);
-			}
-		} );
+    }
 
-		if( !support ) {
-			onEndAnimation( $currPage, $nextPage);
-		}
+    /* Go to previous page */
+    function backPage() {
 
-	}
+        if( isAnimating ) {
+            return false;
+        }
+        isAnimating = true;
 
-	function backPage() {
-		if( isAnimating ) {
-			return false;
-		}
+        var $currPage = $pages.eq( current );
 
-		isAnimating = true;
+        if( current > 1 ) {
+            --current;
+        }
+        else {
+            current = 0;
+        }
 
-		var $currPage = $pages.eq( current );
+        var $backPage = $pages.eq( current ).addClass( 'pt-page-current' ),
+            outClass = 'pt-page-moveToRight', inClass = 'pt-page-moveFromLeft';
 
-		if( current > 1 ) {
-			--current;
-		}
-		else {
-			current = 0;
-		}
+        $currPage.addClass( outClass ).on( animEndEventName, function() {
+            $currPage.off( animEndEventName );
+            endCurrPage = true;
+            if( endBackPage ) {
+                onEndAnimation( $currPage, $backPage);
+            }
+        } );
 
-		var $backPage = $pages.eq( current ).addClass( 'pt-page-current' ),
-			outClass = 'pt-page-moveToRight', inClass = 'pt-page-moveFromLeft';
+        $backPage.addClass( inClass ).on( animEndEventName, function() {
+            $backPage.off( animEndEventName );
+            endBackPage = true;
+            if( endCurrPage ) {
+                onEndAnimation( $currPage, $backPage);
+            }
+        } );
 
+        if( !support ) {
+            onEndAnimation( $currPage, $backPage);
+        }
 
-		$currPage.addClass( outClass ).on( animEndEventName, function() {
-			$currPage.off( animEndEventName );
-			endCurrPage = true;
-			if( endBackPage ) {
-				onEndAnimation( $currPage, $backPage);
-			}
-		} );
+    }
 
-		$backPage.addClass( inClass ).on( animEndEventName, function() {
-			$backPage.off( animEndEventName );
-			endBackPage = true;
-			if( endCurrPage ) {
-				onEndAnimation( $currPage, $backPage);
-			}
-		} );
+    /* When animation ends, reset */
+    function onEndAnimation( $outpage, $inpage) {
+        endCurrPage = false;
+        endNextPage = false;
+        endBackPage = false;
+        resetPage( $outpage, $inpage );
+        isAnimating = false;
+    }
 
-		if( !support ) {
-			onEndAnimation( $currPage, $backPage);
-		}
+    /* Reset */
+    function resetPage( $outpage, $inpage ) {
+        $outpage.attr( 'class', $outpage.data( 'originalClassList' ) );
+        $inpage.attr( 'class', $inpage.data( 'originalClassList' ) + ' pt-page-current' );
+    }
 
-	}
+    init();
 
-	function onEndAnimation( $outpage, $inpage) {
-		endCurrPage = false;
-		endNextPage = false;
-		endBackPage = false;
-		resetPage( $outpage, $inpage );
-		isAnimating = false;
-	}
-
-	function resetPage( $outpage, $inpage ) {
-		$outpage.attr( 'class', $outpage.data( 'originalClassList' ) );
-		$inpage.attr( 'class', $inpage.data( 'originalClassList' ) + ' pt-page-current' );
-	}
-
-
-	init();
-
-	return {
-		init : init,
-		nextPage : nextPage,
-		backPage : backPage
-	};
+    return {
+        init : init,
+        nextPage : nextPage,
+        backPage : backPage
+    };
 
 })();
