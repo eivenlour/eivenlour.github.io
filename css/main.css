@@ -38,7 +38,7 @@ a.nav-link.active, a.nav-link:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 9999;
     background-color: #000000;
     background-attachment: fixed;
@@ -49,7 +49,7 @@ a.nav-link.active, a.nav-link:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 9999;
     background-image: url('../img/website-logo.gif');
     background-repeat: no-repeat; 
