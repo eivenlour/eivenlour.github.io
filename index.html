@@ -9,14 +9,16 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/portfolio.css">
         <link rel="stylesheet" href="css/contact.css">
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="0">
 
-        <!-- Preloader -->
+        <!-- Preloader 
         <div class="overlayer"></div>
         <div class="preloader"></div>
+        -->
 
         <!-- Pages -->
         <div>
@@ -68,7 +70,7 @@
                     <a href="#landing" class="page-header-item">
                         <img src="img/website-logo.png" class="logo"></a>
                     </a>
-                    <h1 class="page-header-item">ABOUT ME</h1>
+                    <h1 class="page-header-item odd">ABOUT ME</h1>
                 </div>
             </div>
 
@@ -78,7 +80,268 @@
                     <a href="#landing" class="page-header-item">
                         <img src="img/website-logo-inverted.png" class="logo"></a>
                     </a>
-                    <h1 class="page-header-item">PROJECTS</h1>
+                    <h1 class="page-header-item even">PROJECTS</h1>
+                </div>
+                <div class="gallery">
+                    <div class="row justify-content-center web">
+                        <div class="col-sm-3">
+                        <a data-toggle="modal" data-target="#ea">
+                            <img class="img-fluid" src="img/projects/ea/ea-landing.png" alt="">
+                        </a>
+                        </div>
+                        <div class="col-sm-3">
+                        <a data-toggle="modal" data-target="#graduate-survey">
+                            <img class="img-fluid" src="img/projects/graduate-survey/gs-landing.png" alt="">
+                        </a>
+                        </div>
+                        <div class="col-sm-3">
+                        <a data-toggle="modal" data-target="#moodcloud">
+                            <img class="img-fluid" src="img/projects/moodcloud/mc-landing.png" alt="">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mobile">
+                        <div class="col-sm-2 col-auto">
+                        <a data-toggle="modal" data-target="#wat">
+                            <img class="img-fluid" src="img/projects/wat/wat-login.png" alt="">
+                        </a>
+                        </div>
+                        <div class="col-sm-2 col-auto">
+                        <a data-toggle="modal" data-target="#funky-tasks">
+                            <img class="img-fluid" src="img/projects/funkytasks/funkytasks-signup.png" alt="">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="ea" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Easy!Appointments Export Features</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="ea-carousel" class="carousel slide web" data-interval="0" data-ride="carousel">
+                                            <!-- Carousel indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#ea-carousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#ea-carousel" data-slide-to="1"></li>
+                                            </ol>
+                                            <!-- Wrapper for carousel items -->
+                                            <div class="carousel-inner web">
+                                                <div class="carousel-item active">
+                                                    <img src="img/projects/ea/export-to-excel.png" alt="First Slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/projects/ea/export-to-pdf.png" alt="Second Slide">
+                                                </div>
+                                            </div>
+                                            <!-- Carousel controls -->
+                                            <a class="carousel-control-prev" href="#ea-carousel" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#ea-carousel" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>For:</b><br>La Centrale, a support centre at University of Alberta, Campus Saint-Jean</p>
+                                        <p><b>When:</b><br>July - August 2019</p>
+                                        <p><b>What I did:</b><br>Added new entities and export features (PDF, Excel) to an existing web application to further suit the client's needs.</p>
+                                        <p><b>Tools used:</b><br>PHP, JavaScript, Bootstrap, SQL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="wat" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Walk and Talk</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="wat-carousel" class="carousel slide mobile" data-interval="0" data-ride="carousel">
+                                            <!-- Carousel indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#wat-carousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#wat-carousel" data-slide-to="1"></li>
+                                            </ol>
+                                            <!-- Wrapper for carousel items -->
+                                            <div class="carousel-inner mobile">
+                                                <div class="carousel-item active">
+                                                    <img src="img/projects/wat/wat-login.png" alt="First Slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/projects/wat/wat-create-event.png" alt="Second Slide">
+                                                </div>
+                                            </div>
+                                            <!-- Carousel controls -->
+                                            <a class="carousel-control-prev" href="#wat-carousel" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#wat-carousel" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>For:</b><br>Women and Children's Health Research Institute; a Software Process and Management Course Client-based Project</p>
+                                        <p><b>When:</b><br>January - April 2019</p>
+                                        <p><b>What I did:</b><br>Built, along with 4 other students, a mobile application that works on both iOS and Andoid platforms. This application brings together women in menopause transition or postmenopause who are interested to try walking as a means to socialize and to alleviate their symptoms</p>
+                                        <p><b>Tools used:</b><br>React Native, React, Redux, Node.js, Sequelize</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="moodcloud" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Moodcloud</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="mc-carousel" class="carousel slide web" data-interval="0" data-ride="carousel">
+                                            <!-- Carousel indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#mc-carousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#mc-carousel" data-slide-to="1"></li>
+                                            </ol>
+                                            <!-- Wrapper for carousel items -->
+                                            <div class="carousel-inner web">
+                                                <div class="carousel-item active">
+                                                    <img src="img/projects/moodcloud/mc-landing.png" alt="First Slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/projects/moodcloud/mc-pick-mood.png" alt="Second Slide">
+                                                </div>
+                                            </div>
+                                            <!-- Carousel controls -->
+                                            <a class="carousel-control-prev" href="#mc-carousel" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#mc-carousel" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>For:</b><br>LevelUp Hackathon (January 2019)</p>
+                                        <p><b>When:</b><br>January 2019</p>
+                                        <p><b>What I did:</b><br>Built, along with 3 other students, a music recommendation tool based on user's chosen mood.</p>
+                                        <p><b>Tools used:</b><br>JavaScript, Spotify API, HTML5, (S)CSS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="funky-tasks" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">FunkyTasks</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="ft-carousel" class="carousel slide mobile" data-interval="0" data-ride="carousel">
+                                            <!-- Carousel indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#ft-carousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#wat-carousel" data-slide-to="1"></li>
+                                            </ol>
+                                            <!-- Wrapper for carousel items -->
+                                            <div class="carousel-inner mobile">
+                                                <div class="carousel-item active">
+                                                    <img src="img/projects/funkytasks/funkytasks-signup.png" alt="First Slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/projects/funkytasks/funkytasks-create-task.png" alt="Second Slide">
+                                                </div>
+                                            </div>
+                                            <!-- Carousel controls -->
+                                            <a class="carousel-control-prev" href="#ft-carousel" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#ft-carousel" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>For:</b><br>Software Engineering Course Project (February - April 2018)</p>
+                                        <p><b>When:</b><br>February - April 2018</p>
+                                        <p><b>What I did:</b><br>Built, along with 5 other students, an Android mobile application that allows task requesters to post the tasks they would like done by task providers.</p>
+                                        <p><b>Tools used:</b><br>Java for Android Development, Elastic Search</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="graduate-survey" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Graduate Studies Survey Website</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="gs-carousel" class="carousel slide web" data-interval="0" data-ride="carousel">
+                                            <!-- Carousel indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#gs-carousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#gs-carousel" data-slide-to="1"></li>
+                                            </ol>
+                                            <!-- Wrapper for carousel items -->
+                                            <div class="carousel-inner web">
+                                                <div class="carousel-item active">
+                                                    <img src="img/projects/graduate-survey/gs-landing.png" alt="First Slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/projects/graduate-survey/gs-tabs.png" alt="Second Slide">
+                                                </div>
+                                            </div>
+                                            <!-- Carousel controls -->
+                                            <a class="carousel-control-prev" href="#gs-carousel" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#gs-carousel" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><b>For:</b><br>Graduate Studies Research in University of Alberta, Campus Saint-Jean</p>
+                                        <p><b>When:</b><br>July 2019</p>
+                                        <p><b>What I did:</b><br>Created a simple website that informs survey takers about the research and redirects them to the actual survey.</p>
+                                        <p><b>Tools used:</b><br>HTML5, CSS3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -88,7 +351,7 @@
                     <a href="#landing" class="page-header-item">
                         <img src="img/website-logo.png" class="logo"></a>
                     </a>
-                    <h1 class="page-header-item">GET IN TOUCH</h1>
+                    <h1 class="page-header-item odd">GET IN TOUCH</h1>
                 </div>  
                 <div>
                     <form action="https://formspree.io/eivenlou@ualberta.ca" method="POST">      

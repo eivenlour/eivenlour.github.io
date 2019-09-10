@@ -6,7 +6,23 @@ body {
 
 h1 {
     font-weight: bold;
+    color: #800020;
 }
+
+h1.odd {
+    text-shadow: -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+
+h1.even {
+    text-shadow: -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
 
 a.nav-link.active, a.nav-link:hover {
     color: grey;
@@ -96,7 +112,7 @@ a.nav-link.active, a.nav-link:hover {
 
 /* Item content */
 .item-content {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
@@ -202,4 +218,4 @@ a.nav-link.active, a.nav-link:hover {
     .preloader {
         background-size: 800px 406px;
     }
-  }
+}

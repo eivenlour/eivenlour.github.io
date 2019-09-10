@@ -1,0 +1,36 @@
+.gallery {
+    margin-top: 20px;
+}
+
+.row .col-sm-3 a img, .row .col-sm-2 a img {
+    border: solid 1px #000000;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.modal-content {
+    background-color: #000000;
+    border: solid 1px #ffffff;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.carousel.web {
+    margin: 20px;
+    width: 300px;
+}
+
+.carousel.mobile {
+    margin: 20px;
+    width: 250px;
+}
+
+.web .carousel-item img{
+    width: 300px;
+}
+
+.mobile .carousel-item img{
+    width: 250px;
+}
+
