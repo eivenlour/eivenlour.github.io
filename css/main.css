@@ -70,7 +70,6 @@ a.nav-link.active, a.nav-link:hover {
 }
 
 .landing-content {
-    margin-left: 45vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -79,17 +78,14 @@ a.nav-link.active, a.nav-link:hover {
 
 .landing-intro {
     font-weight: 500;
-    font-size: 2vw;
 }
 
 .landing-name {
     font-weight: 700;
-    font-size: 5vw;
 }
 
 .landing-title {
     font-weight: 500;
-    font-size: 3vw;
 }
 
 .logo {
@@ -139,63 +135,76 @@ a.nav-link.active, a.nav-link:hover {
     align-items: center;
 }
 
-/* Buttons */
-.button-wrapper {
+/* About */
+.me {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  border: solid 2px #ffffff;
+  padding: 10px;
+  width: 300px;
+}
+
+.me:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+#about .row {
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
 }
 
-.button-wrapper.row {
-    flex-direction: row;
-}
-
-.button-wrapper.column {
+#about .row .col-sm-3 {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.start-button {
-   position: absolute;
-   bottom: 30px;
-   cursor: pointer;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 500;
-   background-color: transparent;
-   border-radius: 5px;
-   border-width: 2px;
-   color: #ffffff;
-   padding: 15px;
-   
+.about-text {
+    margin-top: 20px;
 }
 
-.next-button {
-    position: absolute;
-    right: 5px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+.resume-button {
+    width: 100%;
+    background:#800020;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:20px;
+    transition: all 0.3s;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
 }
 
-
-.back-button {
-    position: absolute;
-    left: 5px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-}
-
-.button-icon {
-    width: 30px;
-}
-
-.button:hover {
-    opacity: 0.5;
+.resume-button:hover { 
+    background:#753445; 
+    text-decoration: none;
+    color: white;
 }
 
 /* Extra small devices (phones) */
 @media only screen and (max-width: 600px) {
     .preloader {
         background-size: 320px 162px;
+    }
+
+    .landing-content {
+        margin-left: 30px;
+    }
+
+    .landing-intro {
+        font-size: 20px;
+    }
+    
+    .landing-name {
+        font-size: 50px;
+    }
+    
+    .landing-title {
+        font-size: 25px;
     }
 }
   
@@ -204,6 +213,21 @@ a.nav-link.active, a.nav-link:hover {
     .preloader {
         background-size: 400px 203px;
     }
+    .landing-content {
+        margin-left: 30vw;
+    }
+
+    .landing-intro {
+        font-size: 20px;
+    }
+    
+    .landing-name {
+        font-size: 60px;
+    }
+    
+    .landing-title {
+        font-size: 35px;
+    }
 }
   
 /* Medium devices (landscape tablets) */
@@ -211,11 +235,42 @@ a.nav-link.active, a.nav-link:hover {
     .preloader {
         background-size: 600px 305px;
     }
+
+    .landing-content {
+        margin-left: 30vw;
+    }
+
+    .landing-intro {
+        font-size: 20px;
+    }
+    
+    .landing-name {
+        font-size: 60px;
+    }
+    
+    .landing-title {
+        font-size: 35px;
+    }
 }
   
 /* Large devices (laptops/desktops) */
 @media only screen and (min-width: 992px) {
     .preloader {
         background-size: 800px 406px;
+    }
+    .landing-content {
+        margin-left: 45vw;
+    }
+
+    .landing-intro {
+        font-size: 30px;
+    }
+    
+    .landing-name {
+        font-size: 70px;
+    }
+    
+    .landing-title {
+        font-size: 45px;
     }
 }
