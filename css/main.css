@@ -212,6 +212,7 @@ a.nav-link.active, a.nav-link:hover {
 @media only screen and (min-width: 600px) {
     .preloader {
         background-size: 400px 203px;
+        height: 100vh;
     }
     .landing-content {
         margin-left: 30vw;
