@@ -16,13 +16,18 @@
     border-radius: 3px;
 }
 
+.modal-body .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+
 .carousel.web {
-    margin: 20px;
     width: 300px;
 }
 
 .carousel.mobile {
-    margin: 20px;
     width: 250px;
 }
 
@@ -32,5 +37,23 @@
 
 .mobile .carousel-item img{
     width: 250px;
+}
+
+.close-button {
+    width: 100%;
+    background:#800020;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+}
+
+.close-button:hover { 
+    background:#753445; 
 }
 
