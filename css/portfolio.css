@@ -18,9 +18,15 @@
 
 .modal-body .row {
     display: flex;
-    flex-direction: row;
+    
+}
+
+.col-sm-6 {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: space-around;
+
 }
 
 .carousel.web {
