@@ -2,7 +2,6 @@
 body {
     position: relative; 
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
 
 h1 {
@@ -41,11 +40,18 @@ a.nav-link.active, a.nav-link:hover {
     background-repeat: no-repeat; 
     background-color: #000000;
     background-position: center;
-    background-attachment: fixed;
  }
 
- .main-content {
-     visibility: hidden;
+ .overlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-repeat: no-repeat; 
+    background-color: #000000;
+    background-position: center;
  }
 
  /* Landing page*/
