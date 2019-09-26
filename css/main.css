@@ -187,6 +187,7 @@ a.nav-link.active, a.nav-link:hover {
 @media only screen and (max-width: 767px) {
     .preloader {
         background-size: 320px 162px;
+        height: 100vh;
     }
 
     body {
