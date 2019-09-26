@@ -7,9 +7,10 @@ function noScroll() {
 
 $(document).ready(function() {
     $(window).on('scroll', noScroll);
-    $(".preloader").delay(5000).fadeOut("slow");
-    $(".overlayer").delay(5500).fadeOut("slow", function() {
+    $("body").css('overflow', 'hidden');   
+    $(".preloader").delay(5000).fadeOut("slow", function () {
         $(window).off('scroll', noScroll);
+        $("body").css('overflow', 'auto');  
     });
 });
 
