@@ -28,10 +28,6 @@ a.nav-link.active, a.nav-link:hover {
     color: grey;
 }
 
-.home-list-item {
-    display: none;
-}
-
 /* Preloader */
 .overlayer {
     position: absolute;
@@ -128,8 +124,8 @@ a.nav-link.active, a.nav-link:hover {
 
 .page-header {
     margin-top: 70px;
-    margin-left: 30px;
     display: flex;
+    justify-content: center;
 }
 
 .page-header-item {
@@ -174,7 +170,7 @@ a.nav-link.active, a.nav-link:hover {
     border:0;
     cursor:pointer;
     color:white;
-    font-size:20px;
+    font-size:16px;
     transition: all 0.3s;
     padding: 10px;
     margin-bottom: 20px;
@@ -191,6 +187,10 @@ a.nav-link.active, a.nav-link:hover {
 @media only screen and (max-width: 600px) {
     .preloader {
         background-size: 320px 162px;
+    }
+
+    body {
+        font-size: 12px;
     }
 
     .landing-content {
@@ -215,6 +215,11 @@ a.nav-link.active, a.nav-link:hover {
     .preloader {
         background-size: 400px 203px;
     }
+
+    body {
+        font-size: 12px;
+    }
+
     .landing-content {
         margin-left: 30vw;
     }
@@ -236,6 +241,10 @@ a.nav-link.active, a.nav-link:hover {
 @media only screen and (min-width: 768px) {
     .preloader {
         background-size: 600px 305px;
+    }
+
+    .body {
+        font-size: 12px;
     }
 
     .landing-content {
@@ -260,6 +269,11 @@ a.nav-link.active, a.nav-link:hover {
     .preloader {
         background-size: 800px 406px;
     }
+
+    .body {
+        font-size: 14px;
+    }
+
     .landing-content {
         margin-left: 45vw;
     }

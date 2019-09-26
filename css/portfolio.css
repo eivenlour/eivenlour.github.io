@@ -2,7 +2,7 @@
     margin-top: 20px;
 }
 
-.row .col-sm-3 a img, .row .col-sm-2 a img {
+.row .col-md-3 a img, .row .col-md-2 a img {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
     border: solid 1px #000000;
@@ -10,7 +10,7 @@
     margin-bottom: 30px;
 }
 
-.row .col-sm-3 a img:hover, .row .col-sm-2 a img:hover {
+.row .col-md-3 a img:hover, .row .col-md-2 a img:hover {
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
 }
@@ -60,7 +60,7 @@
     border:0;
     cursor:pointer;
     color:white;
-    font-size:20px;
+    font-size:16px;
     padding-top:10px;
     padding-bottom:10px;
     transition: all 0.3s;
