@@ -30,7 +30,7 @@ a.nav-link.active, a.nav-link:hover {
 
 /* Preloader */
 .overlayer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -41,7 +41,7 @@ a.nav-link.active, a.nav-link:hover {
 }
   
 .preloader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
