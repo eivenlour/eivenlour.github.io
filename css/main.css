@@ -211,7 +211,7 @@ a.nav-link.active, a.nav-link:hover {
 }
   
 /* Small devices (portrait tablets and large phones) */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 767px) {
     .preloader {
         background-size: 400px 203px;
     }
@@ -244,7 +244,7 @@ a.nav-link.active, a.nav-link:hover {
     }
 
     .body {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .landing-content {
@@ -271,7 +271,7 @@ a.nav-link.active, a.nav-link:hover {
     }
 
     .body {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .landing-content {
