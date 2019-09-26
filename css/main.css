@@ -2,6 +2,7 @@
 body {
     position: relative; 
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 h1 {
@@ -41,6 +42,10 @@ a.nav-link.active, a.nav-link:hover {
     background-color: #000000;
     background-position: center;
     background-attachment: fixed;
+ }
+
+ .main-content {
+     visibility: hidden;
  }
 
  /* Landing page*/
